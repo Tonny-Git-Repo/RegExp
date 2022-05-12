@@ -1,0 +1,49 @@
+@import '../../../styling/index.scss';
+
+.modal{
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: white;
+    z-index: 100;
+    width: fit-content;
+    min-width: 30rem;
+    border-radius: $radius;
+
+   .header{
+       display: flex;
+       background-color: $clr-background-3;
+       align-items: center;
+       justify-content: space-between;
+       height: 3rem;
+       padding: 0.2rem 0.7rem;
+       border-top-left-radius: $radius;
+       border-top-right-radius: $radius;
+
+       button{
+           background-color: $clr-background-1;
+           width: 2rem;
+           height: 2rem;
+           margin: 0;
+           &:hover{
+               background-color: $clr-red;
+           }
+       }
+   }
+   .content{
+       padding: 2rem;
+       font-size: larger;
+       font-weight: 500;
+   }
+}
+
+.overlay{
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-color: rgba(0,0,0,0.7);
+    z-index: 100;
+}

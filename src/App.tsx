@@ -1,26 +1,27 @@
+import { PasswordPage } from './pages/passwordPAge/PasswordPage';
+import {BrowserRouter as Router, Routes, Route, Navigate } from 'react-router-dom';
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import { UrlPage } from './pages/urlPage/UrlPage';
+import { Navbar } from './Component/navBar/NavBar';
+
+export class Routing{
+  public static BaseRouting= "/regExp";
+  public static Redirect= "/";
+  public static PasswordPage = `${Routing.BaseRouting}/password-regexp`;
+  public static UrlPage = `${Routing.BaseRouting}/url-regExp`;
+}
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+  return (<React.Suspense >
+    <Router>
+      <Navbar />
+      <Routes>
+      <Route path={Routing.PasswordPage} element={<PasswordPage/>} />
+      <Route path={Routing.UrlPage} element={<UrlPage/>} />
+      <Route path={Routing.Redirect} element={<Navigate to={Routing.PasswordPage} />} />
+      </Routes>
+    </Router>
+  </React.Suspense>);
 }
 
 export default App;

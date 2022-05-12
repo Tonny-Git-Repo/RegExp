@@ -1,0 +1,37 @@
+@import '../../styling/index.scss';
+
+.url-parser{
+    width: fit-content;
+    min-width: 30rem;
+    min-height: 20rem;
+    border: 1px solid $clr-gray;
+    padding: 1rem;
+    margin: auto;
+    border-radius: $radius;
+    text-align: start;
+    background-color: $clr-background-1;
+    transition: all 0.5s;
+    .display{
+        display: block;
+    }
+    .not-display{
+        display: none;
+    }
+    h1{
+        text-align: center;
+    }
+    .span-text{
+        font-size: larger;
+        font-weight: 500;
+        margin: 0.5rem;
+        text-decoration: underline;
+    }
+    .parts-text{
+        font-size: large;
+        font-weight: 600;
+        letter-spacing: 0.09rem;
+        padding: 0.3rem;
+        background-color: #9AECDB;
+    }
+    
+}

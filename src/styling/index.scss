@@ -1,0 +1,39 @@
+//color
+$clr-green: #27ae60;
+$clr-red: #c0392b;
+$clr-text: #34495e;
+$clr-gray: #95a5a6;
+$clr-btn-inactive: #3498db;
+$clr-btn-hover: #2980b9;
+$clr-btn-active: #1e90ff;
+$clr-text-hover: #ecf0f1;
+$clr-background-1: #dfe4ea ;
+$clr-background-2: #f1f2f6;
+$clr-background-3: #ced6e0;
+
+
+$radius: 5px;
+*{
+    color: $clr-text;
+}
+body{
+    background-color: $clr-background-2;
+}
+button{
+    width: 10rem;
+    height: 3rem;
+    margin: 1rem;
+    border-radius: $radius;
+    background-color: $clr-btn-active;
+    font-size: large;
+    font-weight: 500;
+    transition: all 0.5s;
+}
+
+ul{
+    list-style-type: none;
+}
+
+a{
+    text-decoration: none;
+}
